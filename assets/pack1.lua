@@ -1,8 +1,8 @@
 LAssets = {
-	Eglobe = {"🌎"},
-	Eid = {"🆔"},
-	Epremium = {"👑"},
-	Efree = {"🆓"},
+    Eglobe = {"🌎"},
+    Eid = {"🆔"},
+    Epremium = {"👑"},
+    Efree = {"🆓"},
     Egame = {"🎮"},
     Ekey = {"🔑"},
     Elockedwkey = {"🔐"},
