@@ -213,10 +213,8 @@ do
 	-- new classes
 	
 	function library.new(title)
-		print("add lib")
 		if getgenv().EHub == nil then
 		else
-			print("remove old Ehub")
 			getgenv().EHub:remove()
 		end
 
@@ -226,8 +224,9 @@ do
 			rand = math.random(#characterSet)
 			charset1 = charset1 .. string.sub(characterSet, rand, rand)
 		end
-	 
+	    
 		local container = utility:Create("ScreenGui", {
+			print(charset1),
 			Name = charset1,
 			charset1 = nil,
 			Parent = game.CoreGui
@@ -311,7 +310,6 @@ do
 		utility:InitializeKeybind()
 		utility:DraggingEnabled(container.Main.TopBar, container.Main)
 		getgenv().EHub = container
-		print("setting new Ehub")
 		return setmetatable({
 			container = container,
 			pagesContainer = container.Main.Pages.Pages_Container,
