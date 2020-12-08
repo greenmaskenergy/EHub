@@ -214,7 +214,8 @@ do
 	
 	function library.new(title)
 		print("add lib")
-		if getgenv().EHub ~= nil then
+		if getgenv().EHub == nil then
+		else
 			print("remove old Ehub")
 			getgenv().EHub.remove()
 		end
