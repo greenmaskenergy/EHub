@@ -1,12 +1,4 @@
 -- credits to Denosaur (Venyx Ui Library) his Lib with some personal modifications (no modifications yet!)
---random string
-function RDMstr(length)
-	local res = ""
-	for i = 1, length do
-		res = res .. string.char(math.random(97, 122))
-	end
-	return res
-end
 -- init
 local player = game.Players.LocalPlayer
 local mouse = player:GetMouse()
@@ -227,8 +219,18 @@ do
 			print("remove old Ehub")
 			getgenv().EHub:remove()
 		end
+		upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+		lowerCase = "abcdefghijklmnopqrstuvwxyz"
+		numbers = "0123456789"
+		symbols = "!@#$%&()*+-,./\:;<=>?^[]{}"
+		characterSet = upperCase .. lowerCase .. numbers
+		keyLength = 32
+	 
 		local container = utility:Create("ScreenGui", {
-			Name = RDMstr(40),
+			for i = 1, math.random(10,23) do
+				rand = math.random(#characterSet)
+				Name = Name .. string.sub(characterSet, rand, rand)
+			end
 			Parent = game.CoreGui
 		}, {
 			utility:Create("ImageLabel", {
