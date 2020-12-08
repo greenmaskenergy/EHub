@@ -224,7 +224,7 @@ do
 			rand = math.random(#characterSet)
 			charset1 = charset1 .. string.sub(characterSet, rand, rand)
 		end
-	    
+	    print(charset1)
 		local container = utility:Create("ScreenGui", {
 			print(charset1),
 			Name = charset1,
