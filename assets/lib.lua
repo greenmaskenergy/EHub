@@ -219,16 +219,17 @@ do
 			print("remove old Ehub")
 			getgenv().EHub:remove()
 		end
-		
-		local characterSet = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"
-		local charset1 = ""
+
+		characterSet = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"
+		charset1 = ""
 		for i = 1, math.random(10,23) do
-			local rand = math.random(#characterSet)
+			rand = math.random(#characterSet)
 			charset1 = charset1 .. string.sub(characterSet, rand, rand)
 		end
 	 
 		local container = utility:Create("ScreenGui", {
-			
+			Name = charset1,
+			charset1 = nil,
 			Parent = game.CoreGui
 		}, {
 			utility:Create("ImageLabel", {
