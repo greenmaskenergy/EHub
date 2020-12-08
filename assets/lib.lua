@@ -226,7 +226,6 @@ do
 		end
 		local container = utility:Create("ScreenGui", {
 			Name = charset1,
-			charset1 = nil,
 			Parent = game.CoreGui
 		}, {
 			utility:Create("ImageLabel", {
