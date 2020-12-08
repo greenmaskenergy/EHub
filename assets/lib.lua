@@ -217,7 +217,7 @@ do
 		if getgenv().EHub == nil then
 		else
 			print("remove old Ehub")
-			getgenv().EHub.remove()
+			getgenv().EHub:remove()
 		end
 		local container = utility:Create("ScreenGui", {
 			Name = title,
