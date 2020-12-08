@@ -213,7 +213,9 @@ do
 	-- new classes
 	
 	function library.new(title)
+		print("add lib")
 		if getgenv().EHub ~= nil then
+			print("remove old Ehub")
 			getgenv().EHub.remove()
 		end
 		local container = utility:Create("ScreenGui", {
@@ -298,13 +300,13 @@ do
 		
 		utility:InitializeKeybind()
 		utility:DraggingEnabled(container.Main.TopBar, container.Main)
-		
+		getgenv().EHub = container
+		print("setting new Ehub")
 		return setmetatable({
 			container = container,
 			pagesContainer = container.Main.Pages.Pages_Container,
 			pages = {}
 		}, library)
-		getgenv().EHub = container
 	end
 	
 	function page.new(library, title, icon)
@@ -2171,6 +2173,4 @@ do
 		end
 	end
 end
-
-print("dino was here :\)")
 return library
