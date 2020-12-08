@@ -219,7 +219,7 @@ do
 			print("remove old Ehub")
 			getgenv().EHub:remove()
 		end
-		characterSet "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"
+		characterSet = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"
 		charset1 = ""
 		for i = 1, math.random(10,23) do
 			rand = math.random(#characterSet)
