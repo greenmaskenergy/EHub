@@ -219,18 +219,15 @@ do
 			print("remove old Ehub")
 			getgenv().EHub:remove()
 		end
-		upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-		lowerCase = "abcdefghijklmnopqrstuvwxyz"
-		numbers = "0123456789"
-		symbols = "!@#$%&()*+-,./\:;<=>?^[]{}"
-		characterSet = upperCase .. lowerCase .. numbers
-		keyLength = 32
+		characterSet "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"
+		charset1 = ""
+		for i = 1, math.random(10,23) do
+			rand = math.random(#characterSet)
+			charset1 = charset1 .. string.sub(characterSet, rand, rand)
+		end
 	 
 		local container = utility:Create("ScreenGui", {
-			for i = 1, math.random(10,23) do
-				rand = math.random(#characterSet)
-				Name = Name .. string.sub(characterSet, rand, rand)
-			end
+			
 			Parent = game.CoreGui
 		}, {
 			utility:Create("ImageLabel", {
