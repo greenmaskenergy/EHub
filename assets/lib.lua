@@ -22,7 +22,7 @@ local themes = {
 	DarkContrast = Color3.fromRGB(14, 14, 14),  
 	TextColor = Color3.fromRGB(255, 255, 255)
 }
-
+getgenv().theme = themes
 do
 	function utility:Create(instance, properties, children)
 		local object = Instance.new(instance)
