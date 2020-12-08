@@ -1,4 +1,12 @@
 -- credits to Denosaur (Venyx Ui Library) his Lib with some personal modifications (no modifications yet!)
+--random string
+function RDMstr(length)
+	local res = ""
+	for i = 1, length do
+		res = res .. string.char(math.random(97, 122))
+	end
+	return res
+end
 -- init
 local player = game.Players.LocalPlayer
 local mouse = player:GetMouse()
@@ -220,7 +228,7 @@ do
 			getgenv().EHub:remove()
 		end
 		local container = utility:Create("ScreenGui", {
-			Name = title,
+			Name = RDMstr(40),
 			Parent = game.CoreGui
 		}, {
 			utility:Create("ImageLabel", {
