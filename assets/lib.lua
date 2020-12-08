@@ -222,7 +222,7 @@ do
 		local characterSet = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"
 		local charset1 = ""
 		for i = 1, math.random(10,23) do
-			rand = math.random(#characterSet)
+			local rand = math.random(#characterSet)
 			charset1 = charset1 .. string.sub(characterSet, rand, rand)
 		end
 	 
