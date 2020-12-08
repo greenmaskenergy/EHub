@@ -213,6 +213,9 @@ do
 	-- new classes
 	
 	function library.new(title)
+		if getgenv().EHub ~= nil then
+			getgenv().EHub.remove()
+		end
 		local container = utility:Create("ScreenGui", {
 			Name = title,
 			Parent = game.CoreGui
@@ -301,6 +304,7 @@ do
 			pagesContainer = container.Main.Pages.Pages_Container,
 			pages = {}
 		}, library)
+		getgenv().EHub = container
 	end
 	
 	function page.new(library, title, icon)
